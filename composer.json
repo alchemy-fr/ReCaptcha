@@ -3,7 +3,7 @@
     "description" : "ReCaptcha Client",
     "license"     : "MIT",
     "require": {
-        "php"                     : ">=7.0",
+        "php"                     : "~7.0",
         "guzzle/guzzle"           : "~3.0"
     },
     "require-dev": {

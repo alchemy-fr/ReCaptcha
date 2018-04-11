@@ -18,8 +18,4 @@ class ReCaptchaServiceProvider implements ServiceProviderInterface
            return ReCaptcha::create($app['recaptcha.public-key'], $app['recaptcha.private-key']);
         };
     }
-
-    public function boot(Application $app)
-    {
-    }
 }
