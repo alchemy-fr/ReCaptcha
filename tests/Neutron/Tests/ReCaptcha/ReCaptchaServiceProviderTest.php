@@ -2,9 +2,9 @@
 
 namespace Neutron\Tests\ReCaptcha;
 
+use PHPUnit\Framework\TestCase;
 use Neutron\ReCaptcha\ReCaptchaServiceProvider;
 use Silex\Application;
-use PHPUnit\Framework\TestCase;
 
 class ReCaptchaServiceProviderTest extends TestCase
 {
