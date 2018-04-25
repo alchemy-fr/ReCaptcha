@@ -4,8 +4,9 @@ namespace Neutron\Tests\ReCaptcha;
 
 use Neutron\ReCaptcha\ReCaptcha;
 use Symfony\Component\HttpFoundation\Request;
+use PHPUnit\Framework\TestCase;
 
-class ReCaptchatest extends \PHPUnit_Framework_TestCase
+class ReCaptchatest extends TestCase
 {
     /** @test */
     public function instanciationShouldBeGood()
@@ -67,7 +68,7 @@ class ReCaptchatest extends \PHPUnit_Framework_TestCase
 
         $catchParameters = null;
 
-        $request = $this->getMock('Guzzle\Http\Message\EntityEnclosingRequestInterface');
+        $request = $this->createMock('Guzzle\Http\Message\EntityEnclosingRequestInterface');
         $request->expects($this->once())
             ->method('addPostFields')
             ->will($this->returnCallback(function ($parameters) use (&$catchParameters) {
@@ -125,7 +126,7 @@ class ReCaptchatest extends \PHPUnit_Framework_TestCase
 
         $catchParameters = null;
 
-        $request = $this->getMock('Guzzle\Http\Message\EntityEnclosingRequestInterface');
+        $request = $this->createMock('Guzzle\Http\Message\EntityEnclosingRequestInterface');
         $request->expects($this->once())
             ->method('addPostFields')
             ->will($this->returnCallback(function ($parameters) use (&$catchParameters) {
@@ -202,7 +203,7 @@ class ReCaptchatest extends \PHPUnit_Framework_TestCase
 
         $catchParameters = null;
 
-        $request = $this->getMock('Guzzle\Http\Message\EntityEnclosingRequestInterface');
+        $request = $this->createMock('Guzzle\Http\Message\EntityEnclosingRequestInterface');
         $request->expects($this->once())
             ->method('addPostFields')
             ->will($this->returnCallback(function ($parameters) use (&$catchParameters) {
@@ -247,7 +248,7 @@ class ReCaptchatest extends \PHPUnit_Framework_TestCase
 
     private function getClientMock()
     {
-        return $this->getMock('Guzzle\Http\ClientInterface');
+        return $this->createMock('Guzzle\Http\ClientInterface');
     }
 
     public function provideBadIps()
